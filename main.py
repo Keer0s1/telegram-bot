@@ -1,20 +1,15 @@
 import logging
-import os
 from aiogram import Bot, Dispatcher, types
-from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.utils import executor
 
-# Ваш токен и ссылка на канал
-API_TOKEN = '7867522162:AAF3P_-a125ILYYM0FGwvMccFlSaTPRaeF0'
-CHANNEL_LINK = 'https://t.me/clicktobetbot'
+API_TOKEN = '7867522162:AAF3P_-a125ILYYM0FGwvMccFlSaTPRaeF0'  # Ваш токен
+CHANNEL_LINK = 'https://t.me/clicktobetbot'  # Ссылка на ваш канал
 
 logging.basicConfig(level=logging.INFO)
 
-# Инициализация бота и диспетчера
 bot = Bot(token=API_TOKEN)
-storage = MemoryStorage()
-dp = Dispatcher(bot, storage=storage)
+dp = Dispatcher(bot)
 
-# Обработка команды /start
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
     user = message.from_user
@@ -29,6 +24,5 @@ async def send_welcome(message: types.Message):
         )
     )
 
-# Запуск бота
 if __name__ == '__main__':
-    dp.run_polling()
+    executor.start_polling(dp, skip_updates=True)
