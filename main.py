@@ -2,8 +2,8 @@ import logging
 import os
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = '7867522162:AAF3P_-a125ILYYM0FGwvMccFlSaTPRaeF0'  # твой токен
-CHANNEL_LINK = 'https://t.me/clicktobetbot'  # твоя ссылка на канал
+API_TOKEN = '7867522162:AAF3P_-a125ILYYM0FGwvMccFlSaTPRaeF0'  # Ваш токен
+CHANNEL_LINK = 'https://t.me/clicktobetbot'  # Ссылка на канал
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
