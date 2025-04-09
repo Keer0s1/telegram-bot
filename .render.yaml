@@ -5,5 +5,5 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
     envVars:
-      - key: BOT_TOKEN
-        value: ТВОЙ_ТОКЕН_ОТ_BOTFATHER
+    - key: BOT_TOKEN
+    value: '7867522162:AAF3P_-a125ILYYM0FGwvMccFlSaTPRaeF0'  # Ваш токен
